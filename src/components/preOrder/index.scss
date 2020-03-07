@@ -1,0 +1,39 @@
+@import "../../styles/mixin";
+
+   .order_list_view{
+      margin-top: 2px;
+      width:100%;
+      background-color: white;
+      .list_view{
+            @include fr(center);
+            padding-top: 30px;
+            padding-bottom: 30px;
+            margin-left: 20px;
+            margin-right: 20px;
+          }
+          .list_btn_img{
+            width:200px;
+            height:200px;
+            margin-right: 20px;
+          }
+          .list_view_right{
+            @include fc(flex-start);
+            height: 200px;
+          }
+          .intro_text{
+            @include sc(32px,#1c1c1c);
+          }
+      
+          .price_text{
+            @include sc(30px,#E54A2E);
+            margin-right: 25px;
+            font-weight: bold;
+          }
+          .origin_price_text{
+            @include sc(32px,#1c1c1c);
+            text-decoration-line: line-through
+          }
+        
+       
+    }
+    

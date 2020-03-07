@@ -1,0 +1,10 @@
+@import "../../styles/mixin";
+
+.BindMobile-page {
+  @include wh(100%, 100%);
+  background-color: white;
+
+  .btn-bind{
+    margin:40px;
+  }
+}

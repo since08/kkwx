@@ -1,0 +1,165 @@
+/* colors
+-------------------------- */
+$_333 : #333 !default;
+$_DF1: #DF1D0F;
+$_666: #666666;
+$_999: #999999;
+$_ECE: #ECECEC;
+
+/* button-colors
+-------------------------- */
+$btn-active: rgb(236, 33, 67) !default;
+$btn-disabled: #CCC !default;
+
+$btn-disabled-1: mix(#fff, $btn-active, 70%) !default;
+/* 53a8ff */
+
+/* background-colors
+-------------------------- */
+$bg-color-base: #fff !default;
+$bg-color-light : #ccc !default; //页面浅灰背景&图片浅灰背景
+$bg-color-danger: #F9EFEF !default; //页面浅红背景&按钮边框
+$bg-color-panel: #EC5D75 !default;
+
+/* tag-colors
+-------------------------- */
+$tag-primary:rgb(159, 216, 113) !default;
+$tag-dark:#555 !default;
+
+$action-sheet-timer: 300ms;
+/* z-index */
+$zindex-divider: 100;
+$zindex-steps: 500;
+$zindex-tab: 600;
+$zindex-form: 700;
+$zindex-nav: 800;
+$zindex-indexes: 805;
+$zindex-flot-layout: 810;
+$zindex-drawer: 900;
+$zindex-modal: 1000;
+$zindex-action-sheet: 1010;
+$zindex-picker: 1010;
+$zindex-toast: 1090;
+
+/* timing function */
+$timing-func: cubic-bezier(0.36, 0.66, 0.04, 1);
+
+/**
+ * CSS cubic-bezier timing functions
+ * http://bourbon.io/docs/#timing-functions
+ */
+$ease-in-quad: cubic-bezier(0.550, 0.085, 0.680, 0.530);
+$ease-in-cubic: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+$ease-in-quart: cubic-bezier(0.895, 0.030, 0.685, 0.220);
+$ease-in-quint: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+$ease-in-sine: cubic-bezier(0.470, 0.000, 0.745, 0.715);
+$ease-in-expo: cubic-bezier(0.950, 0.050, 0.795, 0.035);
+$ease-in-circ: cubic-bezier(0.600, 0.040, 0.980, 0.335);
+$ease-in-back: cubic-bezier(0.600, -0.280, 0.735, 0.045);
+
+$ease-out-quad: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+$ease-out-cubic: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+$ease-out-quart: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+$ease-out-quint: cubic-bezier(0.230, 1.000, 0.320, 1.000);
+$ease-out-sine: cubic-bezier(0.390, 0.575, 0.565, 1.000);
+$ease-out-expo: cubic-bezier(0.190, 1.000, 0.220, 1.000);
+$ease-out-circ: cubic-bezier(0.075, 0.820, 0.165, 1.000);
+$ease-out-back: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+
+$ease-in-out-quad: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+$ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+$ease-in-out-quart: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+$ease-in-out-quint: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+$ease-in-out-sine: cubic-bezier(0.445, 0.050, 0.550, 0.950);
+$ease-in-out-expo: cubic-bezier(1.000, 0.000, 0.000, 1.000);
+$ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.150, 0.860);
+$ease-in-out-back: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+
+/**
+ * 通用的遮罩
+ */
+ @mixin overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba($color: #000, $alpha: 0.3);
+}
+/* methods
+-------------------------- */
+// 背景图片地址和大小
+@mixin bg($url) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+// 定位上下左右居中
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// 定位上下居中
+@mixin ct {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// 定位左右居中
+@mixin cl {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// 宽高
+@mixin wh($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+// 字体大小，颜色
+@mixin sc($size, $color) {
+  font-size: $size;
+  color: $color;
+}
+
+// flex 布局和 子元素 对其方式
+@mixin fj($type: space-between) {
+  display: flex;
+  justify-content: $type;
+}
+// flex row 布局和 轴 对其方式
+@mixin fr($type: flex-start) {
+  display: flex;
+  align-items: $type;
+  flex-direction: row;
+}
+
+// flex column 布局和 轴 对其方式
+@mixin fc($type:flex-start ) {
+  display: flex;
+  align-items: $type;
+  flex-direction: column;
+}
+
+@mixin flex1($type:1) {
+  flex: $type
+}
+
+//距离
+@mixin distance($marginLeft:20px, $marginRight:20px) {
+  margin-left:$marginLeft;
+  margin-right: $marginRight
+}
+
+@mixin distance_padding($paddingLeft:17px, $paddingRight:17px) {
+  padding-left:$paddingLeft;
+  padding-right: $paddingRight
+}
+

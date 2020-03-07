@@ -1,0 +1,30 @@
+@import "../../styles/mixin";
+.home-page {
+  @include wh(100%, 100%);
+  @include fc(center);
+  background-color:$_ECE;
+
+  .banner{
+    @include wh(100%,400px);
+    background-color: white
+  }
+  .top_bar{
+    @include fr(center);
+    @include wh(100%,100px);
+    background-color: #fff;
+    .div_line{
+      width: 1px;
+      background-color: $_ECE;
+      height: 100px;
+    }
+    .active{
+      color: #1be46f;
+    }
+    .btn{
+      @include fr(center);
+      justify-content: center;
+      flex:1;
+    }
+  }
+  
+}

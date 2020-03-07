@@ -1,0 +1,119 @@
+@import "../../styles/mixin";
+
+.home-page {
+  @include wh(100%, 100%);
+  @include fc(center);
+  background-color:$_ECE;
+
+  .banner{
+    @include wh(100%,400px);
+    background-color: white
+  }
+  .top_bar{
+    @include fr(center);
+    @include wh(100%,100px);
+    background-color: #fff;
+    .div_line{
+      width: 1px;
+      background-color: $_ECE;
+      height: 100px;
+    }
+    .active{
+      color: #1be46f;
+    }
+    .btn{
+      @include fr(center);
+      justify-content: center;
+      flex:1;
+    }
+  }
+
+  .item{
+    @include fc();
+    width: 94%;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+
+    .tag_shop{
+      height: 50px;
+      width:160px;
+      @include fr(center);
+      justify-content: center;
+      background-color: #E54A2E;
+      position: absolute;
+      top: 30px;
+      left: -5px;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+
+      .txt{
+        color:#fff;
+      }
+    }
+
+    .tag_count_down{
+      height: 50px;
+      width:160px;
+      @include fr(center);
+      justify-content: center;
+      background-color: $_DF1;
+      position: absolute;
+      top: 30px;
+      right: -5px;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+
+      .txt{
+        color:#fff;
+      }
+    }
+  
+
+    .cover{
+      height: 300px;
+      max-height: 650px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    .title{
+      @include sc(32px,$_333);
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-top: 10px;
+    }
+    .line{
+      height: 1px;
+      background-color: $_ECE;
+      width: 100%;
+      margin-top: 20px;
+    }
+    .info{
+      height: 100px;
+      @include fr(center);
+      width: 94%;
+      padding-left: 20px;
+      padding-right: 20px;
+      .space{
+       flex:1;
+      }
+      .price{
+        @include sc(38px,$_DF1);
+        font-weight: bold;
+      }
+      .price2{
+        @include sc(30px,$_666);
+        margin-left: 18px;
+        text-decoration:line-through;
+      }
+    }
+
+    
+    
+  }
+}

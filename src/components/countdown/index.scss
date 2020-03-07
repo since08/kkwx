@@ -1,0 +1,29 @@
+@import "../../styles/mixin";
+
+.at-count-down {
+  @include fr(center);
+
+  &__item {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &__time-box {
+    display: inline-block;
+    text-align: center;
+    text-transform: none;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    vertical-align: middle;
+  }
+
+  .at-count-down__separator {
+    @include sc(28px,$_DF1);
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+  .at-count-down__time {
+    @include sc(28px,$_DF1);
+  }
+ 
+}

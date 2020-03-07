@@ -1,0 +1,107 @@
+@import "../../styles/mixin";
+
+.OrderDetail-page {
+  @include wh(100%, 100%);
+
+  .detail_top_view{
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .top_text{
+    @include sc(32px,#1c1c1c);
+    font-weight: bold;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .detail_list_view{
+    margin-top: 2px;
+    @include fc(flex-start);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: white;
+  }
+  .detail_text1{
+    @include sc(28px,#1c1c1c);
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .detail_text3{
+    @include sc(28px,#1c1c1c);
+  }
+  .detail_text2{
+    @include sc(28px,#E54A2E);
+  }
+  .last_detail_view{
+    @include fr(flex-start);
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .erweima_view{
+    margin-top: 20px;
+    width:100%;
+    margin-bottom: 50px;
+    @include fc(center);
+  }
+  .text1{
+    @include sc(32px,#1c1c1c);
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .btn_view{
+    width:100%;
+    height: 100px;
+    @include fc(center);
+    flex-direction: row-reverse;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    z-index: 999;
+  }
+  .main2_view{
+    width:100%;
+    background-color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    @include fr(center);
+  }
+  .info_middle_view{
+    @include fr(flex-start);
+    width:100%;
+  }
+  .info_middle_left_view{
+    @include fc(flex-start);
+    width:80%;
+  }
+  .location_img{
+    width:35px;
+    height:50px;
+  }
+  .btn_shop1{
+   @include wh(100px,100%);
+   @include fc(center);
+   justify-content: center;
+  }
+  .call_img{
+    width:40px;
+    height:50px;
+  }
+  .name1{
+    @include sc(26px,#1C1C1C);
+  }
+  .name2{
+    @include sc(26px,#888888);
+    margin-top:20px;
+  }
+  .pay{
+    background-color: #E54A2E;
+    color:#fff;
+  }
+  .btn_kf{
+    margin-right:20px;
+    margin-left:60px;
+  }
+  
+}
